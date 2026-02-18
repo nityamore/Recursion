@@ -11,7 +11,7 @@ bool CheckPerfect(int iNo)
 
     if(iCnt <= (iNo / 2))
     {
-        if(iNo % iCnt == 0)
+        if((iNo % iCnt) == 0)
         {
             iSum = iSum + iCnt;
         }
@@ -19,14 +19,8 @@ bool CheckPerfect(int iNo)
         CheckPerfect(iNo);
     }
     
-    if(iSum == iNo)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return (iSum == iNo);
+    
 }
 
 int main()
